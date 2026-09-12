@@ -1,6 +1,4 @@
-// Tabler (Bootstrap 5 inside, variables prefixed --tblr-) + the rapyd components.
-@use '@tabler/core/scss/tabler';
-
+// Tabler itself is loaded as compiled CSS from resources/js/theme.js (see there).
 // Bootstrap's Sass variables only (no CSS): tom-select's stylesheet needs them.
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
@@ -45,5 +43,8 @@ html[data-bs-theme=dark] .page .btn-outline-secondary {
 .auth-card-narrow { max-width: 460px; }
 
 // ── Small fixes for rapyd components inside Tabler ──────────────────────────
+// Bootstrap gives coloured badges white text, Tabler the body colour: keep them readable.
+.badge:is(.bg-primary, .bg-secondary, .bg-success, .bg-danger, .bg-info, .bg-dark) { color: #fff; }
+.badge.bg-warning { color: #1f2937; }
 .card .rpd-table .table { margin-bottom: 0; }
 .breadcrumb { --tblr-breadcrumb-item-padding-x: .5rem; }
