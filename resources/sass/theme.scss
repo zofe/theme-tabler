@@ -1,0 +1,41 @@
+// Tabler (Bootstrap 5 inside, variables prefixed --tblr-) + the rapyd components.
+@use '@tabler/core/scss/tabler';
+
+// Bootstrap's Sass variables only (no CSS): tom-select's stylesheet needs them.
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+
+// rapyd components (tables, views, forms, tom-select, design tokens)
+@import '@rapyd/sass/rapyd-base';
+
+// ── Design tokens ────────────────────────────────────────────────────────────
+// The runtime palette (config rapyd.layout.palette) writes --bs-primary & co.
+// Tabler components read --tblr-primary: map one onto the other, keeping
+// Tabler's own colour when no palette is set.
+:root, [data-bs-theme=light], [data-bs-theme=dark] {
+    --tblr-primary: var(--bs-primary, #0054a6);
+    --tblr-primary-rgb: var(--bs-primary-rgb, 0, 84, 166);
+    --tblr-primary-fg: var(--rpd-primary-contrast, #fff);
+    --tblr-link-color: var(--bs-link-color, var(--tblr-primary));
+    --tblr-link-hover-color: var(--bs-link-hover-color, var(--tblr-primary));
+}
+.navbar-vertical { --navbar-bg: var(--rpd-sidebar-bg, #182433); }
+.page-wrapper    { background: var(--rpd-content-bg, transparent); }
+.page-wrapper > header.navbar { --navbar-bg: var(--rpd-topbar-bg, var(--tblr-bg-surface)); }
+
+// Tabler gives headings their own colour: inside a coloured block keep the text colour.
+.text-white :is(h1, h2, h3, h4), .bg-primary.text-white :is(h1, h2, h3, h4) { color: inherit; }
+// btn-outline-dark on a dark surface
+[data-bs-theme=dark] .btn-outline-dark { --tblr-btn-color: var(--tblr-body-color); --tblr-btn-border-color: var(--tblr-border-color); }
+
+// ── Auth pages (login, register, password, 2FA) ─────────────────────────────
+.auth-body { background-color: var(--tblr-bg-surface-secondary, #f6f8fb); }
+.auth-card { max-width: 900px; }
+.auth-card-narrow { max-width: 460px; }
+
+// ── Small fixes for rapyd components inside Tabler ──────────────────────────
+.card .rpd-table .table { margin-bottom: 0; }
+.breadcrumb { --tblr-breadcrumb-item-padding-x: .5rem; }

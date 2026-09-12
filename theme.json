@@ -1,0 +1,9 @@
+{
+    "name": "tabler",
+    "title": "Tabler",
+    "version": "0.1.0",
+    "description": "Tabler admin template as a rapyd-admin theme",
+    "screenshot": "screenshot.png",
+    "rapyd-admin": "^9.7",
+    "template": { "name": "Tabler", "version": "1.5.1", "url": "https://tabler.io", "license": "MIT" }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "zofe/theme-tabler",
+    "description": "Tabler theme for rapyd-admin: the Tabler admin template (Bootstrap 5) as the admin, public and auth layouts.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["rapyd-admin", "theme", "tabler", "bootstrap", "laravel"],
+    "require": {
+        "php": "^8.2",
+        "zofe/rapyd-admin": "^9.7"
+    },
+    "autoload": {
+        "psr-4": { "Zofe\\ThemeTabler\\": "src/" }
+    },
+    "extra": {
+        "laravel": { "providers": ["Zofe\\ThemeTabler\\ThemeServiceProvider"] }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
