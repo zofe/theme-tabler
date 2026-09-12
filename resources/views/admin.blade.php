@@ -1,23 +1,16 @@
-{{-- Tabler theme — admin area --}}
+{{-- Tabler theme — admin area, the horizontal layout of the official preview:
+     header (brand, user), menu bar (modules' menus, search), page header, content --}}
 @extends('layout::app')
-
-{{-- Tabler renders the vertical navbar only when <html> asks for it --}}
-@section('navbar_position', 'vertical')
 
 @section('main')
     <div class="page">
+        @include('layout::includes.admin_navbar')
         @include('layout::includes.admin_sidebar')
 
         <div class="page-wrapper">
-            @include('layout::includes.admin_navbar')
-
             <div class="page-header d-print-none">
                 <div class="container-xl">
-                    <div class="row g-2 align-items-center">
-                        <div class="col">
-                            <x-rpd::breadcrumbs class="breadcrumb-item" active="active" />
-                        </div>
-                    </div>
+                    <x-rpd::breadcrumbs class="breadcrumb-item" active="active" />
                     @stack('page_header')
                 </div>
             </div>

@@ -24,12 +24,20 @@
 }
 .navbar-vertical { --navbar-bg: var(--rpd-sidebar-bg, #182433); }
 .page-wrapper    { background: var(--rpd-content-bg, transparent); }
-.page-wrapper > header.navbar { --navbar-bg: var(--rpd-topbar-bg, var(--tblr-bg-surface)); }
+.page > header.navbar { --navbar-bg: var(--rpd-topbar-bg, var(--tblr-bg-surface)); }
+.page > header.navbar .avatar { width: 2rem; height: 2rem; --tblr-avatar-size: 2rem; }
 
 // Tabler gives headings their own colour: inside a coloured block keep the text colour.
 .text-white :is(h1, h2, h3, h4), .bg-primary.text-white :is(h1, h2, h3, h4) { color: inherit; }
 // btn-outline-dark on a dark surface
-[data-bs-theme=dark] .btn-outline-dark { --tblr-btn-color: var(--tblr-body-color); --tblr-btn-border-color: var(--tblr-border-color); }
+html[data-bs-theme=dark] .page .btn-outline-dark,
+html[data-bs-theme=dark] .page .btn-outline-secondary {
+    --tblr-btn-color: var(--tblr-body-color);
+    --tblr-btn-border-color: var(--tblr-border-color-active, rgba(255,255,255,.3));
+    --tblr-btn-hover-color: var(--tblr-body-color);
+    --tblr-btn-hover-bg: rgba(255,255,255,.08);
+    --tblr-btn-hover-border-color: rgba(255,255,255,.4);
+}
 
 // ── Auth pages (login, register, password, 2FA) ─────────────────────────────
 .auth-body { background-color: var(--tblr-bg-surface-secondary, #f6f8fb); }
