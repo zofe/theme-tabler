@@ -4,6 +4,14 @@
 [Rapyd Admin](https://github.com/zofe/rapyd-admin). It follows the layout contract in `docs/THEMES.md` of the package:
 same modules, same `x-rpd::` components, a different shell.
 
+![Rapyd Admin with the Tabler theme, dark mode](screenshot.png)
+
+<details><summary>Light mode</summary>
+
+![Rapyd Admin with the Tabler theme, light mode](screenshot-light.png)
+
+</details>
+
 ## Install
 
 ```bash
