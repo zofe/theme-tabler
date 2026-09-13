@@ -20,6 +20,15 @@
     --bs-primary-rgb: 0, 84, 166;
     --bs-link-color: #0054a6;
     --bs-link-hover-color: color-mix(in srgb, #0054a6 80%, black);
+    // Surfaces and text, read by the rapyd components (tom-select dropdowns,
+    // the AI widget…) and resolved by Tabler's light-dark() in both modes.
+    --bs-body-bg: var(--tblr-bg-surface);
+    --bs-body-color: var(--tblr-body-color);
+    --bs-emphasis-color: var(--tblr-body-color);
+    --bs-secondary-color: var(--tblr-secondary-color);
+    --bs-secondary-bg: var(--tblr-bg-surface-secondary);
+    --bs-tertiary-bg: var(--tblr-bg-surface-tertiary);
+    --bs-border-color: var(--tblr-border-color);
     --tblr-primary: var(--bs-primary, #0054a6);
     --tblr-primary-rgb: var(--bs-primary-rgb, 0, 84, 166);
     --tblr-primary-fg: var(--rpd-primary-contrast, #fff);

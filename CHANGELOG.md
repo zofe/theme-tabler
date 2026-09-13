@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2] - 2026-09-13
+
+### Fixed
+
+- TomSelect dropdowns (every `x-rpd::select-list`) were transparent: the theme now maps Bootstrap's surface tokens (`--bs-body-bg`, `--bs-body-color`, `--bs-border-color`, secondary and tertiary backgrounds) onto Tabler's, in light and dark mode.
+
 ## [0.1.1] - 2026-09-13
 
 ### Fixed
