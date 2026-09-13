@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3] - 2026-09-13
+
+### Changed
+
+- Theme toggle follows the look actually on screen (system preference included), so the first click always flips it.
+
 ## [0.1.2] - 2026-09-13
 
 ### Fixed
