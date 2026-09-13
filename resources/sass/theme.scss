@@ -14,6 +14,12 @@
 // Tabler components read --tblr-primary: map one onto the other, keeping
 // Tabler's own colour when no palette is set.
 :root, [data-bs-theme=light], [data-bs-theme=dark] {
+    // Bootstrap's names, read by the rapyd component rules (checks, focus rings,
+    // pagination…): Tabler does not define them, the palette overrides them.
+    --bs-primary: #0054a6;
+    --bs-primary-rgb: 0, 84, 166;
+    --bs-link-color: #0054a6;
+    --bs-link-hover-color: color-mix(in srgb, #0054a6 80%, black);
     --tblr-primary: var(--bs-primary, #0054a6);
     --tblr-primary-rgb: var(--bs-primary-rgb, 0, 84, 166);
     --tblr-primary-fg: var(--rpd-primary-contrast, #fff);
