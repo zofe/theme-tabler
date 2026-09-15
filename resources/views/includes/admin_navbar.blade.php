@@ -38,6 +38,7 @@
             @endif
 
             @include('layout::includes.theme_switcher')
+            @include('layout::includes.theme_picker')
 
             @guest
                 @if(Route::has('login'))

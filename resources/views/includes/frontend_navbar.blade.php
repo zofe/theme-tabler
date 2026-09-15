@@ -22,6 +22,7 @@
                 @include('layout::includes.user_info_dropdown')
             @endguest
             @include('layout::includes.theme_switcher')
+            @include('layout::includes.theme_picker')
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-menu">

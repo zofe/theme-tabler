@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.5] - 2026-09-15
+
+### Added
+
+- Theme picker in the admin and frontend navbars (rapyd-admin 9.13 `RAPYD_THEME_SWITCH`).
+
 ## [0.1.4] - 2026-09-15
 
 ### Changed
