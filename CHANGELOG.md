@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.6] - 2026-09-15
+
+- Theme picker honours `rapyd.theme_picker` (rapyd-admin 9.13.1).
+
 ## [0.1.5] - 2026-09-15
 
 ### Added
