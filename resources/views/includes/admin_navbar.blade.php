@@ -41,7 +41,7 @@
             @include('layout::includes.theme_picker')
 
             @guest
-                @if(Route::has('login'))
+                @if(Route::has('login') && config('rapyd.layout.auth_links', true))
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @endif
             @endguest
