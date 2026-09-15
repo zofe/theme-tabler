@@ -10,16 +10,18 @@
         <div class="navbar-nav flex-row order-md-last align-items-center">
             @stack('right_navbar')
             @guest
-                @if(Route::has('login'))
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                @endif
-                @if(Route::has('register'))
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                @if(config('rapyd.layout.auth_links', true))
+                    @if(Route::has('login'))
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    @endif
+                    @if(Route::has('register'))
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
                 @endif
             @else
                 @include('layout::includes.user_info_dropdown')
-                @include('layout::includes.theme_switcher')
             @endguest
+            @include('layout::includes.theme_switcher')
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-menu">

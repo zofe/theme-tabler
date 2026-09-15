@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.4] - 2026-09-15
+
+### Changed
+
+- Frontend navbar: the light / dark toggle is shown to guests too; `RAPYD_AUTH_LINKS=false` hides the Login / Register links (rapyd-admin 9.12.1).
+
 ## [0.1.3] - 2026-09-13
 
 ### Changed
