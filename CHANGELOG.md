@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.8] - 2026-09-16
+
+- Rebuilt on rapyd-admin 9.13.3: row separators and text utilities of the module views.
+
 ## [0.1.7] - 2026-09-15
 
 - The guest Login link of the admin navbar follows `RAPYD_AUTH_LINKS`.
