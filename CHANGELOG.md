@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.9] - 2026-09-17
+
+- Dark mode: the primary colour is lightened (as the runtime palette does), brand, links and buttons are readable on the dark surfaces.
+
 ## [0.1.8] - 2026-09-16
 
 - Rebuilt on rapyd-admin 9.13.3: row separators and text utilities of the module views.

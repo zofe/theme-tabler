@@ -35,6 +35,22 @@
     --tblr-link-color: var(--bs-link-color, var(--tblr-primary));
     --tblr-link-hover-color: var(--bs-link-hover-color, var(--tblr-primary));
 }
+// Dark mode: Tabler's blue (#0054a6) is far too dark on the dark surfaces (brand, links, outline
+// buttons). Lighten it as the runtime palette does for a custom primary (Zofe\Rapyd\Themes\Palette),
+// so links and accents keep their contrast; the palette's own dark rule still wins (!important).
+html[data-bs-theme=dark] {
+    --bs-primary: color-mix(in srgb, #0054a6 60%, white);
+    --bs-primary-rgb: 102, 152, 202;
+    --bs-link-color: color-mix(in srgb, #0054a6 55%, white);
+    --bs-link-hover-color: color-mix(in srgb, #0054a6 40%, white);
+    --tblr-primary: var(--bs-primary);
+    --tblr-primary-rgb: var(--bs-primary-rgb);
+    --tblr-primary-fg: #0b1220;
+    --rpd-primary-contrast: #0b1220;
+    --tblr-link-color: var(--bs-link-color);
+    --tblr-link-hover-color: var(--bs-link-hover-color);
+}
+
 .navbar-vertical { --navbar-bg: var(--rpd-sidebar-bg, #182433); }
 .page-wrapper    { background: var(--rpd-content-bg, transparent); }
 .page > header.navbar { --navbar-bg: var(--rpd-topbar-bg, var(--tblr-bg-surface)); }
