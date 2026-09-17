@@ -74,6 +74,9 @@ html[data-bs-theme=dark] .page .btn-outline-secondary {
 .auth-card-narrow { max-width: 460px; }
 
 // ── Small fixes for rapyd components inside Tabler ──────────────────────────
+// Tabler clips badges (overflow: hidden): a counter positioned on the corner of a badge was cut off.
+.badge.position-relative { overflow: visible; }
+.badge .badge.rounded-pill { font-size: .65em; padding: .25em .45em; }
 // Bootstrap gives coloured badges white text, Tabler the body colour: keep them readable.
 .badge:is(.bg-primary, .bg-secondary, .bg-success, .bg-danger, .bg-info, .bg-dark) { color: #fff; }
 .badge.bg-warning { color: #1f2937; }

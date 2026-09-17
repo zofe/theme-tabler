@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.10] - 2026-09-18
+
+- Counters on the corner of a badge (the quantity of an order line) were clipped by Tabler's `overflow: hidden`.
+
 ## [0.1.9] - 2026-09-17
 
 - Dark mode: the primary colour is lightened (as the runtime palette does), brand, links and buttons are readable on the dark surfaces.
