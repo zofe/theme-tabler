@@ -1,5 +1,5 @@
 @php
-    $homeRoute = Route::has('admin.home') ? route('admin.home') : (Route::has('home') ? route('home') : url('/'));
+    $homeRoute = function_exists('rapyd_brand_url') ? rapyd_brand_url() : (Route::has('admin.home') ? route('admin.home') : (Route::has('home') ? route('home') : url('/')));
 @endphp
 <header class="navbar navbar-expand-md d-print-none">
     <div class="container-xl">
